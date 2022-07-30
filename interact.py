@@ -17,6 +17,7 @@ To change this script to batch model, simply modify line 70 from "BatchGen([mode
 """
 output = subprocess.check_output("ls", shell=True)
 print (output)
+
 def install_sapcy():
     subprocess.call(["./download.sh"], shell=True)
 
@@ -30,7 +31,7 @@ is_spacy_installed()
 parser = argparse.ArgumentParser(
     description='Interact with document reader model.'
 )
-parser.add_argument('--model-file', default='models/best_model.pt',
+parser.add_argument('--model-file', default='./models/best_model.pt',
                     help='path to model file')
 parser.add_argument("--cuda", type=str2bool, nargs='?',
                     const=True, default=torch.cuda.is_available(),
