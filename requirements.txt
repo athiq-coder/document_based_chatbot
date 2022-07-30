@@ -3,5 +3,5 @@ msgpack-python
 spacy>=3
 streamlit
 pydaisi
-torch 
+torch
 torchvision
