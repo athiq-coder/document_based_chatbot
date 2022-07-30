@@ -1,7 +1,7 @@
 numpy
 msgpack-python
 spacy>=3
-torch
-torchvision
+torch==1.4.0+cpu
+torchvision==0.5.0+cpu
 streamlit
 pydaisi
