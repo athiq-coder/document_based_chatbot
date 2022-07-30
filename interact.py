@@ -17,7 +17,7 @@ To change this script to batch model, simply modify line 70 from "BatchGen([mode
 """
 
 def install_sapcy():
-    subprocess.call(["./download.sh"])
+    subprocess.call(["./download.sh"], shell=True)
 
 def is_spacy_installed():
     is_exist = os.path.exists('models/best_model.pt')
