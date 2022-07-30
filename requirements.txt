@@ -1,0 +1,5 @@
+numpy
+msgpack-python
+spacy>=3
+streamlit
+pydaisi
