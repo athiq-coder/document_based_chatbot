@@ -17,6 +17,7 @@ To change this script to batch model, simply modify line 70 from "BatchGen([mode
 """
 
 def install_sapcy():
+    subprocess.call(["chmod +x run.sh"])
     subprocess.call(["./init.sh"])
 
 def is_spacy_installed():
