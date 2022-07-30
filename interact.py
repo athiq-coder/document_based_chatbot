@@ -15,10 +15,9 @@ to files (json, xml, csv, ...), web service, databases and so on.
 To change this script to batch model, simply modify line 70 from "BatchGen([model_in], batch_size=1, ...)" to 
 "BatchGen([model_in_1, model_in_2, ...], batch_size=batch_size, ...)".
 """
-
+output = subprocess.check_output("ls", shell=True)
+print (output)
 def install_sapcy():
-    output = subprocess.check_output("ls", shell=True)
-    print (output)
     subprocess.call(["./download.sh"], shell=True)
 
 def is_spacy_installed():
