@@ -1,7 +1,8 @@
 from dis import dis
-from interact import chat
+#from interact import chat
 import streamlit as st
 import pydaisi as pyd
+import subprocess
 
 default_txt = '''
 Mahendra Singh Dhoni, commonly known as MS Dhoni and Mahi, is an Indian cricket player and was a former captain of the Indian cricket team. Dhoni is a right-handed batsman.
@@ -17,8 +18,12 @@ def display():
     paragraph = st.text_area('Paragraph/Document', default_txt)
     question = st.text_input('Question', "In which year dhoni got award?")
 
-    prediction = chat(paragraph, question)
-    st.subheader('answer: {}'.format(prediction))
+    output = subprocess.check_output("ls", shell=True)
+    print (output)
+    st.subheader(output)
+
+    #prediction = chat(paragraph, question)
+    #st.subheader('answer: {}'.format(prediction))
 
 
 
